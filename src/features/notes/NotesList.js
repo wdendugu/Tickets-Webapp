@@ -32,7 +32,7 @@ const NotesList = () => {
 
     const { ids, entities } = notes
 
-    // Filtrado de notas segun perfil del usuario (en el caso de empleado solo pueden ver notas asignadas al usuario
+    // Filtrado de tickets segun perfil del usuario (en el caso de empleado solo pueden ver tickets asignadas al usuario
 
     let filteredIds
     if (isAdmin || isManager) {

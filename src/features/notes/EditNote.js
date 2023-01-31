@@ -27,7 +27,7 @@ const EditNote = () => {
 
     if (!isManager && !isAdmin) {
         if (note.username !== username ) {
-            return <p className="errmsg"> No tiene permisos para ver esta nota</p>
+            return <p className="errmsg"> No tiene permisos para ver este ticket</p>
         }
     }
 
