@@ -48,7 +48,7 @@ const DashHeader = () => {
     if (NOTES_REGEX.test(pathname)) {
         newNoteButton = (
             <button
-                className='icon-button'
+                className='icon-button header-button'
                 title="Nueva Nota"
                 onClick={onNewNoteClicked}
             >
@@ -61,7 +61,7 @@ const DashHeader = () => {
     if (USERS_REGEX.test(pathname)) {
         newUserButton = (
             <button
-                className='icon-button'
+                className='icon-button header-button'
                 title="Nuevo Usuario"
                 onClick={onNewUserClicked}
             >
@@ -75,7 +75,7 @@ const DashHeader = () => {
         if (!USERS_REGEX.test(pathname && pathname.includes("/dash"))) {
             usersButton = (
                 <button
-                    className='icon-button'
+                    className='icon-button header-button'
                     title="Lista de Usuarios"
                     onClick={onUsersClicked}
                 >
@@ -90,7 +90,7 @@ const DashHeader = () => {
         if (!NOTES_REGEX.test(pathname && pathname.includes("/dash"))) {
             notesButton = (
                 <button
-                    className='icon-button'
+                    className='icon-button header-button'
                     title="Notas"
                     onClick={onNotesClicked}
                 >
@@ -102,7 +102,7 @@ const DashHeader = () => {
 
     const logoutButton = (
         <button
-            className="icon-button"
+            className="icon-button header-button"
             title="Logout"
             onClick={sendLogout}
         >

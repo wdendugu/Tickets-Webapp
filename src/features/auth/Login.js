@@ -63,7 +63,7 @@ function Login() {
   if (isLoading) return <PulseLoader color={"#FFF"}/>
 
   const content = (
-    <section className="public">
+    <section className="public public-login">
       <header>
         <h1>Iniciar Sesion</h1>
       </header>
@@ -72,20 +72,22 @@ function Login() {
         <p ref={errRef} className={errClass} aria-live="assertive">{errMsg}</p>
 
         <form className="form" onSubmit={handleSubmit}>
-          <label htmlFor="username">Usuario:</label>
+          <label htmlFor="username">Usuario</label>
           <input
-            className="form__input"
+            className="form__input__login"
             type="text"
             id="username"
+            placeholder="Ingresa tu usuario"
             ref={userRef}
             value={username}
             onChange={handleUserInput}
             autoComplete="off"
             required
           />
-          <label htmlFor="password">Contraseña:</label>
+          <label htmlFor="password">Contraseña</label>
           <input
-            className="form__input"
+            className="form__input__login"
+            placeholder="Ingresa tu contraseña"
             type="password"
             id="password"
             value={password}
@@ -105,11 +107,7 @@ function Login() {
             Mantener sesion abierta
           </label>
         </form>
-
       </main>
-      <footer>
-        <Link to="/">Home</Link>
-      </footer>
     </section>
   )
 

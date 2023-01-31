@@ -16,7 +16,7 @@ const Note = ({ noteId }) => {
     const navigate = useNavigate()
 
     if (note) {
-        const created = new Date (note.createdAt).toLocaleString("es-AR", {day: 'numeric', month:'long'})
+        const created = new Date (note.createdAt).toLocaleString("es-AR", {day: 'numeric', month:'numeric', year:"numeric"})
 
         const updated = new Date (note.updatedAt).toLocaleString("es-AR", {day: 'numeric', month:'long'})
 
@@ -24,14 +24,14 @@ const Note = ({ noteId }) => {
 
         return (
             <tr className="table__row">
-                <td className="table__cell note__title">{note.ticket}</td>
+                <td className="table__cell note__title">{note.title}</td>
+                <td className="table__cell note__title">#{note.ticket}</td>
                 <td className='table__cell note__status'>
                     {note.completed
                         ? <span className='note__status--completed'>Cerrada</span>
                         : <span className='note__status--open'>Abierta</span>
                     }
                 </td>
-                <td className="table__cell note__title">{note.title}</td>
                 <td className="table__cell note__created">{created}</td>
                 <td className="table__cell note__username">{note.username}</td>
                 <td className="table__cell note__username">{note.location}</td>
