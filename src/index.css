@@ -334,58 +334,6 @@ tr {
   gap: 0.5em;
 }
 
-@media screen and (max-width: 400px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .dash-header__nav {
-    gap: 0;
-  }
-
-  .icon-button {
-    font-size: 1.5rem;
-  }
-}
-
-
-@media screen and (min-width: 768px) {
-
-  body {
-    font-size: 1.25rem;
-  }
-
-  .dash-header {
-    padding: 1rem;
-  }
-
-  .dash-container {
-    padding: 1em;
-  }
-
-  .table {
-    font-size: 1.5rem;
-    padding: 0 1.5rem 0 1rem
-  }
-
-  .table--notes {
-    grid-template-columns: 1fr 0.2fr repeat(3, 0.4fr) 0.5fr 0.1fr;
-  }
-
-  .note__created,
-  .note__updated,
-  .note__username {
-    display: block
-  }
-
-  .form__action-buttons {
-    position: static;
-  }
-
-  .dash-header__container--small {
-    max-width: 100%;
-  }
-}
 
 
 /* Revisar */
@@ -403,7 +351,7 @@ tr {
   border-bottom: #5c5555 1px solid;
   margin-top: 0;
   margin-bottom: 1rem;
-
+  
 }
 
 .form__input__login:focus {
@@ -506,3 +454,69 @@ tr {
   color: black;
 }
 
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .dash-header__nav {
+    gap: 0;
+  }
+
+  .icon-button {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+  }
+
+  .table__cell {
+    height: 100%;
+  }
+
+  .dash-header__title {
+    display: none;
+  }
+
+  .dash-header__nav {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+
+  body {
+    font-size: 1.25rem;
+  }
+
+  .dash-header {
+    padding: 1rem;
+  }
+
+  .dash-container {
+    padding: 1em;
+  }
+
+  .table {
+    font-size: 1.5rem;
+    padding: 0 1.5rem 0 1rem
+  }
+
+  .table--notes {
+    grid-template-columns: 1fr 0.2fr repeat(3, 0.4fr) 0.5fr 0.1fr;
+  }
+
+  .note__created,
+  .note__updated,
+  .note__username {
+    display: block
+  }
+
+  .form__action-buttons {
+    position: static;
+  }
+
+  .dash-header__container--small {
+    max-width: 100%;
+  }
+}
