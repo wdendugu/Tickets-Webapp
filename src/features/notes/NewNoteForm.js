@@ -60,7 +60,6 @@ useEffect (() => {
   if (user) {
     const selectedUser = users.find(userS => userS._id === user)
     setEmail(selectedUser.email)
-      console.log(email)
   }
 }, [onUserChange])
 
