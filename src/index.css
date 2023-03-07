@@ -406,8 +406,8 @@ tr {
 
 }
 
-.form__input__login[type=text]:focus {
-  border: 0;
+.form__input__login:focus {
+  outline: none;
 }
 
 .form__submit-button {

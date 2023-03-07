@@ -33,7 +33,6 @@ const EditNoteForm = ({note, users}) => {
 
     
     const [updateNote, {
-        isLoading,
         isSuccess,
         isError,
         error

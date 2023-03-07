@@ -26,7 +26,6 @@ const DashHeader = () => {
     const [sendLogout, {
         isLoading,
         isSuccess,
-        isError,
         error
     }] = useSendLogoutMutation()
 
@@ -110,7 +109,6 @@ const DashHeader = () => {
         </button>
     )
 
-    const errClass = isError ? "errmsg" : "offscreen"
 
     let buttonContent
     if (isLoading) {
