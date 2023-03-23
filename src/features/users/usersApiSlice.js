@@ -1,8 +1,8 @@
 import {
     createSelector,
     createEntityAdapter
-} from "@reduxjs/toolkit"
-import { apiSlice } from "../../app/api/apiSlice"
+} from '@reduxjs/toolkit'
+import { apiSlice } from '../../app/api/apiSlice'
 
 const usersAdapter = createEntityAdapter({})
 
@@ -45,7 +45,7 @@ export const usersApiSlice = apiSlice.injectEndpoints ({
                 }
             }),
             invalidatesTags: [
-                {type: 'User', id: "LIST"}
+                {type: 'User', id: 'LIST'}
             ]
         }),
         updateUser: builder.mutation ({

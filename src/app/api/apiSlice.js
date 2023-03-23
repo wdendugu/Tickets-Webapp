@@ -8,7 +8,7 @@ const baseQuery = fetchBaseQuery({
         const token = getState().auth.token
 
         if (token) {
-            headers.set("authorization", `Bearer ${token}`)
+            headers.set('authorization', `Bearer ${token}`)
         }
         return headers
     }
@@ -38,7 +38,7 @@ const baseQueryWithReauth = async (args, api, extraOptions) => {
         } else {
 
             if (refreshResult?.error?.status === 403) {
-                refreshResult.error.data.message = "El login ha expirado."
+                refreshResult.error.data.message = 'El login ha expirado.'
             }
             return refreshResult
         }

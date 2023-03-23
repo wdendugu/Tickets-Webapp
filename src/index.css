@@ -20,7 +20,6 @@
   --INACTIVE: lightgray;
   --LINK-COLOR: whitesmoke;
   --LINK-HOVER: rgba(245, 245, 245, 0.9);
-  --NOTE-BGCOLOR: hsla(240, 64%, 27%, 0.65);
   --STATUS-COMPLETE: limegreen;
   --STATUS-OPEN: firebrick;
   --TABLE-BGCOLOR: #FFF;
@@ -136,7 +135,7 @@ a:focus-visible {
 }
 
 .welcome a::before {
-  content: "➜ "
+  content: '➜ '
 }
 
 /* || DASH HEADER, CONTAINER & FOOTER */
@@ -452,6 +451,15 @@ tr {
 .dash-footer__button:hover{
   background-color: rgb(223, 216, 216);
   color: black;
+}
+
+.table__link {
+  border: none;
+  background: none;
+}
+
+.table__link:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 400px) {

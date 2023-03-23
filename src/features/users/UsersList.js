@@ -1,6 +1,6 @@
-import { useGetUsersQuery } from "./usersApiSlice"
-import User from "./User"
-import PulseLoader from "react-spinners/PulseLoader"
+import { useGetUsersQuery } from './usersApiSlice'
+import User from './User'
+import PulseLoader from 'react-spinners/PulseLoader'
 
 const UsersList = () => {
 
@@ -18,7 +18,7 @@ const UsersList = () => {
 
   let content
 
-  if (isLoading) content = <PulseLoader color={"#FFF"}/>
+  if (isLoading) content = <PulseLoader color={'#FFF'}/>
 
   if (isError) {
     content = <p className={'errmsg'}> {error?.error} </p>
@@ -31,13 +31,13 @@ const UsersList = () => {
     const tableContent = ids?.length && ids.map (userId => <User key={userId} userId={userId} />)
     
     content = (
-      <table className="table table--users">
-        <thead className="table__thead">
+      <table className='table table--users'>
+        <thead className='table__thead'>
           <tr>
-              <th scope="col" className="table__th user__username">Usuario</th>
-              <th scope="col" className="table__th user__roles">Roles</th>
-              <th scope="col" className="table__th user__roles">Correo</th>
-              <th scope="col" className="table__th user__edit">Editar</th>
+              <th scope='col' className='table__th user__username'>Usuario</th>
+              <th scope='col' className='table__th user__roles'>Roles</th>
+              <th scope='col' className='table__th user__roles'>Correo</th>
+              <th scope='col' className='table__th user__edit'>Editar</th>
           </tr>
         </thead>
         <tbody>

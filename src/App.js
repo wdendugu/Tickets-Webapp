@@ -1,5 +1,5 @@
 import {Routes, Route} from 'react-router-dom'
-import Layout from "./components/Layout"
+import Layout from './components/Layout'
 import Public from './components/Public'
 import DashLayout from './components/DashLayout'
 import Login from './features/auth/Login'
@@ -14,11 +14,11 @@ import Prefetch from './features/auth/Prefetch'
 import PersistLogin from './features/auth/PersistLogin'
 import RequireAuth from './features/auth/RequireAuth'
 import { ROLES } from './config/roles'
-import useTitle from "./hooks/useTitle"
+import useTitle from './hooks/useTitle'
 
 
 function App() {
-  useTitle("Mesa de Ayuda Kennedy")
+  useTitle('Mesa de Ayuda Kennedy')
   return (
     <Routes>
       <Route path='/' element={<Layout />}>

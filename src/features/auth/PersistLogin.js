@@ -1,10 +1,10 @@
-import { Outlet, Link } from "react-router-dom"
+import { Outlet, Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
-import { useRefreshMutation } from "./authApiSlice"
-import usePersist from "../../hooks/usePersist"
+import { useRefreshMutation } from './authApiSlice'
+import usePersist from '../../hooks/usePersist'
 import { useSelector } from 'react-redux'
-import { selectCurrentToken } from "./authSlice"
-import PulseLoader from "react-spinners/PulseLoader"
+import { selectCurrentToken } from './authSlice'
+import PulseLoader from 'react-spinners/PulseLoader'
 
 const PersistLogin = () => {
 
@@ -55,13 +55,13 @@ const PersistLogin = () => {
         content = <Outlet />
     } else if (isLoading) { //persist: si, token: no
         console.log('loading')
-        content = <PulseLoader color={"#FFF"}/>
+        content = <PulseLoader color={'#FFF'}/>
     } else if (isError) { //persist: si, token: no
         console.log('error')
         content = (
             <p className='errmsg'>
                 {`${error?.data?.message} - `}
-                <Link to="/login">Por favor logearse nuevamente</Link>.
+                <Link to='/login'>Por favor logearse nuevamente</Link>.
             </p>
         )
     } else if (isSuccess && trueSuccess) { //persist: si, token: si
